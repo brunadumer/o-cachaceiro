@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="O Cachaceiro - Bar e restaurante no Campo Comprido, Curitiba. Drinks especiais, petiscos, pratos completos e a primeira dose de cachaça por conta da casa. Delivery e reservas.">
+    <title>O Cachaceiro | Bar & Restaurante em Curitiba</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ========== HEADER ========== -->
+    <!-- Topbar transparente: ganha fundo quando o usuário rola a página (ver script.js, seção 3) -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav-esquerda">
+                    <!-- EDITÁVEL: Logo -->
+                    <a href="#inicio" class="logo">
+                        <img src="images/logo.png" alt="O Cachaceiro">
+                    </a>
+
+                    <!-- Ações principais ao lado da logo: Delivery, Reservas e WhatsApp -->
+                    <div class="header-acoes">
+                        <div class="delivery-dropdown" id="deliveryDropdown">
+                            <button class="acao-btn" id="deliveryToggle" aria-expanded="false" aria-haspopup="true">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2L5 8Zm4 0V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>Delivery</span>
+                            </button>
+                            <!-- EDITÁVEL: Links dos apps de delivery -->
+                            <div class="delivery-menu" id="deliveryMenu">
+                                <a href="https://www.ifood.com.br/delivery/curitiba-pr/o-cachaceiro-cidade-industrial/355d8920-d283-4e9d-af62-889a744605d3" target="_blank" rel="noopener">
+                                    <img src="images/icone-ifood.png" alt="">
+                                    Pedir no iFood
+                                </a>
+                                <a href="https://pedeaqui.app/o-cachaceiro" target="_blank" rel="noopener">
+                                    <img src="images/icone-pedeaqui.png" alt="">
+                                    Pedir no Pede Aqui
+                                </a>
+                            </div>
+                        </div>
+                        <a href="#reservas" class="acao-btn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v14H4zM4 10h16M8 3v5M16 3v5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>Reservas</span>
+                        </a>
+                        <!-- EDITÁVEL: Número do WhatsApp -->
+                        <a href="https://wa.me/5541997903969" class="acao-btn acao-whatsapp" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 .9c-1-.4-2.4-1.8-2.8-2.8l.9-1-1-2L9 8.5Z" fill="currentColor"/></svg>
+                            <span>WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#cardapio">Cardápio</a></li>
+                    <li><a href="#estrutura">Estrutura</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="inicio">
+        <div class="hero-background">
+            <!-- EDITÁVEL: Foto principal (fachada) -->
+            <img src="images/fachada.png" alt="Fachada do O Cachaceiro à noite" class="hero-bg-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-local">Bar & Restaurante · Campo Comprido, Curitiba</span>
+                <!-- EDITÁVEL: Título principal -->
+                <h1>Mais que um restaurante, uma experiência curitibana.</h1>
+                <p class="hero-subtitle">Boa conversa, ambiente acolhedor, petisco de boteco e a cachaça como protagonista. E a primeira dose é por nossa conta.</p>
+                <div class="hero-buttons">
+                    <a href="#reservas" class="btn btn-primary">Reservar mesa</a>
+                    <a href="#cardapio" class="btn btn-secondary">Ver o cardápio</a>
+                </div>
+                <!-- EDITÁVEL: Horário -->
+                <div class="hero-horario">
+                    <span class="status-dot"></span>
+                    Aberto todos os dias, das 17h à 00h
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SOBRE ========== -->
+    <section class="sobre" id="sobre">
+        <div class="container">
+            <div class="sobre-content">
+                <div class="sobre-image">
+                    <img src="images/balcao.png" alt="Balcão do bar com o letreiro Economize água, beba cachaça">
+                </div>
+                <div class="sobre-info">
+                    <span class="eyebrow">Sobre o Cachaceiro</span>
+                    <h2>Comida de boteco e muito respeito pela cachaça</h2>
+                    <!-- EDITÁVEL: Texto sobre o negócio -->
+                    <p>O Cachaceiro é um bar e restaurante em Curitiba que junta a tradição da comida de boteco com a valorização da cachaça. Bolinhos, torresmo, porções variadas e pratos completos, num ambiente descontraído do fim da tarde até a noite.</p>
+                    <p>A decoração rústica, com barris e garrafas, faz parte da experiência. Por aqui, a <strong>primeira dose de cachaça é cortesia da casa</strong>, um convite para conhecer a bebida que dá nome ao lugar.</p>
+                    <div class="sobre-destaques">
+                        <div><strong>17h–00h</strong><span>todos os dias</span></div>
+                        <div><strong>1ª dose</strong><span>por conta da casa</span></div>
+                        <div><strong>Delivery</strong><span>iFood e Pede Aqui</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CARDÁPIO ========== -->
+    <section class="cardapio" id="cardapio">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Cardápio</span>
+                <h2>Comida autêntica de bar, em altíssima qualidade</h2>
+            </div>
+            <div class="cardapio-grid">
+                <!-- EDITÁVEL: Cards do cardápio -->
+                <article class="cardapio-card">
+                    <img src="images/drink.png" alt="Drink especial servido ao lado de um barril">
+                    <div class="cardapio-content">
+                        <h3>Drinks especiais</h3>
+                        <p>Muito além da caipirinha: versões tropicais, refrescantes, cremosas ou intensas, prontas para animar qualquer encontro.</p>
+                    </div>
+                </article>
+                <article class="cardapio-card">
+                    <img src="images/bolinhos.png" alt="Porção de bolinhos">
+                    <div class="cardapio-content">
+                        <h3>Petiscos perfeitos</h3>
+                        <p>Simples, saborosos e feitos para dividir. Nada combina mais com bons momentos do que bolinho e companhia.</p>
+                    </div>
+                </article>
+                <article class="cardapio-card">
+                    <img src="images/carne-de-onca.png" alt="Carne de onça">
+                    <div class="cardapio-content">
+                        <h3>Pratos completos</h3>
+                        <p>Carnes suculentas, hambúrgueres artesanais com carnes selecionadas e acompanhamentos para uma refeição marcante.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="cardapio-cta">
+                <p>Quer receber em casa?</p>
+                <a href="https://www.ifood.com.br/delivery/curitiba-pr/o-cachaceiro-cidade-industrial/355d8920-d283-4e9d-af62-889a744605d3" class="btn btn-primary" target="_blank" rel="noopener">Pedir no iFood</a>
+                <a href="https://pedeaqui.app/o-cachaceiro" class="btn btn-outline" target="_blank" rel="noopener">Pedir no Pede Aqui</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ESTRUTURA / GALERIA ========== -->
+    <section class="estrutura" id="estrutura">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Nossa estrutura</span>
+                <h2>Um ponto de encontro com cara de casa</h2>
+            </div>
+            <div class="galeria-grid">
+                <!-- EDITÁVEL: Imagens da galeria -->
+                <div class="galeria-item grande">
+                    <img src="images/salao-letreiro.png" alt="Salão interno com o letreiro do Cachaceiro">
+                </div>
+                <div class="galeria-item">
+                    <img src="images/salao-mesas.png" alt="Mesas do salão">
+                </div>
+                <div class="galeria-item">
+                    <img src="images/area-externa.png" alt="Área externa do bar">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== RESERVAS ========== -->
+    <!-- O formulário monta a mensagem e abre o WhatsApp (ver script.js, seção 5) -->
+    <section class="reservas" id="reservas">
+        <div class="container">
+            <div class="reservas-content">
+                <div class="reservas-info">
+                    <span class="eyebrow">Reservas</span>
+                    <h2>Garanta a sua mesa</h2>
+                    <p>Aniversário, happy hour da firma ou só aquela reunião de amigos. Preencha os dados e confirme direto com a gente pelo WhatsApp.</p>
+                    <ul class="reservas-lista">
+                        <li>Resposta rápida pelo WhatsApp</li>
+                        <li>Espaço para grupos e comemorações</li>
+                        <li>Primeira dose de cachaça como cortesia</li>
+                    </ul>
+                </div>
+                <form class="reserva-form" id="reservaForm">
+                    <div class="form-campo campo-inteiro">
+                        <label for="reservaNome">Nome</label>
+                        <input type="text" id="reservaNome" name="nome" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-campo">
+                        <label for="reservaData">Data</label>
+                        <input type="date" id="reservaData" name="data" required>
+                    </div>
+                    <div class="form-campo">
+                        <label for="reservaHora">Horário</label>
+                        <input type="time" id="reservaHora" name="hora" min="17:00" max="23:30" value="19:00" required>
+                    </div>
+                    <div class="form-campo campo-inteiro">
+                        <label for="reservaPessoas">Quantas pessoas?</label>
+                        <input type="number" id="reservaPessoas" name="pessoas" min="1" max="80" value="4" required>
+                    </div>
+                    <div class="form-campo campo-inteiro">
+                        <label for="reservaObs">Observações <span>(opcional)</span></label>
+                        <textarea id="reservaObs" name="obs" rows="3" placeholder="Ex.: é aniversário, preciso de cadeirinha..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary campo-inteiro">Enviar reserva pelo WhatsApp</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTATO ========== -->
+    <section class="contato" id="contato">
+        <div class="container">
+            <div class="contato-content">
+                <div class="contato-info">
+                    <span class="eyebrow">Onde estamos</span>
+                    <h2>Vem pro Cachaceiro</h2>
+                    <!-- EDITÁVEL: Informações de contato -->
+                    <div class="info-item">
+                        <h4>Endereço</h4>
+                        <p>R. Eduardo Sprada, 4930 – Campo Comprido<br>Curitiba – PR, 81270-010</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Horário de funcionamento</h4>
+                        <p>Todos os dias, das 17h à 00h</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Reservas e informações</h4>
+                        <p>WhatsApp: <a href="https://wa.me/5541997903969" target="_blank" rel="noopener">(41) 99790-3969</a></p>
+                    </div>
+                </div>
+                <div class="contato-mapa">
+                    <!-- EDITÁVEL: Endereço do mapa -->
+                    <iframe src="https://www.google.com/maps?q=R.+Eduardo+Sprada,+4930+-+Campo+Comprido,+Curitiba+-+PR&output=embed" loading="lazy" title="Mapa do O Cachaceiro" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== INSTAGRAM ========== -->
+    <!--
+        Faixa de posts rodando sozinha (carrossel infinito).
+        EDITÁVEL: Troque as imagens pelos posts do perfil. Para um feed automático
+        e sempre atualizado, substitua o bloco .instagram-trilho pelo código de um
+        widget (ex.: Behold, LightWidget ou Elfsight) conectado ao @ocachaceirocwb.
+    -->
+    <section class="instagram" id="instagram">
+        <div class="container instagram-header">
+            <div>
+                <span class="eyebrow">Brinde com a gente nas redes</span>
+                <h2>@ocachaceirocwb</h2>
+            </div>
+            <a href="https://www.instagram.com/ocachaceirocwb" class="btn btn-primary" target="_blank" rel="noopener">Seguir no Instagram</a>
+        </div>
+        <div class="instagram-faixa">
+            <div class="instagram-trilho" id="instagramTrilho">
+                <a href="https://www.instagram.com/ocachaceirocwb" target="_blank" rel="noopener" class="insta-post"><img src="images/bolinhos.png" alt="Bolinhos" loading="lazy"></a>
+                <a href="https://www.instagram.com/ocachaceirocwb" target="_blank" rel="noopener" class="insta-post"><img src="https://images.unsplash.com/photo-1546171753-97d7676e4602?w=400&q=75" alt="Caipirinha" loading="lazy"></a>
+                <a href="https://www.instagram.com/ocachaceirocwb" target="_blank" rel="noopener" class="insta-post"><img src="images/balcao.png" alt="Balcão do bar" loading="lazy"></a>
+                <a href="https://www.instagram.com/ocachaceirocwb" target="_blank" rel="noopener" class="insta-post"><img src="images/carne-de-onca.png" alt="Carne de onça" loading="lazy"></a>
+                <a href="https://www.instagram.com/ocachaceirocwb" target="_blank" rel="noopener" class="insta-post"><img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400&q=75" alt="Drink da casa" loading="lazy"></a>
+                <a href="https://www.instagram.com/ocachaceirocwb" target="_blank" rel="noopener" class="insta-post"><img src="images/drink.png" alt="Drink especial" loading="lazy"></a>
+                <a href="https://www.instagram.com/ocachaceirocwb" target="_blank" rel="noopener" class="insta-post"><img src="images/fachada.png" alt="Fachada" loading="lazy"></a>
+                <a href="https://www.instagram.com/ocachaceirocwb" target="_blank" rel="noopener" class="insta-post"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=75" alt="Espetinhos" loading="lazy"></a>
+                <a href="https://www.instagram.com/ocachaceirocwb" target="_blank" rel="noopener" class="insta-post"><img src="images/salao-letreiro.png" alt="Salão" loading="lazy"></a>
+                <a href="https://www.instagram.com/ocachaceirocwb" target="_blank" rel="noopener" class="insta-post"><img src="https://images.unsplash.com/photo-1584225064785-c62a8b43d148?w=400&q=75" alt="Degustação" loading="lazy"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ÁREA RESERVADA PARA AGENTE DE IA ========== -->
+    <div id="ai-agent-container" class="ai-agent-area">
+        <!-- O widget do agente de IA será inserido aqui -->
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <img src="images/selo.png" alt="O Cachaceiro" class="footer-selo">
+                <div class="footer-social">
+                    <!-- EDITÁVEL: Redes sociais -->
+                    <a href="https://www.instagram.com/ocachaceirocwb" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.youtube.com/@OCachaceiro-i7r" target="_blank" rel="noopener">YouTube</a>
+                    <a href="https://open.spotify.com/playlist/0zMkpt1kyhekVdFTnVqPAu" target="_blank" rel="noopener">Playlist no Spotify</a>
+                </div>
+                <p class="footer-aviso">Entrada de menores de 18 anos permitida somente acompanhados dos pais ou responsáveis legais, sendo proibido o consumo de bebidas alcoólicas. Proibida a entrada de menores de 14 anos. Beba com moderação.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 O Cachaceiro. Todos os direitos reservados.</p>
+                <p><a href="#privacidade">Política de Privacidade</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Política de Privacidade (texto simples no rodapé) -->
+    <section class="privacidade" id="privacidade">
+        <div class="container">
+            <h3>Política de Privacidade</h3>
+            <p>O Cachaceiro respeita sua privacidade. Os dados informados no formulário de reserva são enviados apenas pelo seu WhatsApp e usados somente para confirmar a reserva. Não compartilhamos informações pessoais com terceiros sem consentimento.</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
