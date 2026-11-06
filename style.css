@@ -1,18 +1,31 @@
 /* ========== VARIÁVEIS CSS ========== */
-/* EDITÁVEL: Cores principais do tema (verde garrafa e dourado da marca) */
+/* EDITÁVEL: Cores principais do tema (manual da marca: cana, carvalho, caipira e açúcar) */
 :root {
-    --primary: #f5c842;
-    --primary-dark: #d9a91f;
-    --gold: #f3d382;
-    --green: #10291c;
-    --green-dark: #0a1a11;
-    --green-light: #1b3d2a;
-    --bg: #f7f1e3;
-    --text: #1b1f1a;
-    --text-light: #5b5f55;
+    /* Paleta oficial do Manual de Identidade Visual O Cachaceiro */
+    --cana: #313b23;
+    --carvalho: #936138;
+    --caipira: #abae87;
+    --acucar: #fcf8ec;
+    /* Secundárias (inspiradas nos rótulos antigos): só como toque */
+    --vermelho: #ce2616;
+    --amarelo: #f6c900;
+    --verde: #516f29;
+    --azul: #78c7c9;
+    --primary: #abae87;
+    --primary-dark: #936138;
+    --gold: #fcf8ec;
+    --green: #313b23;
+    --green-dark: #252d1a;
+    --green-light: #3e4a2d;
+    --bg: #fcf8ec;
+    --text: #252d1a;
+    --text-light: #5e6150;
     --white: #ffffff;
     --whatsapp: #25d366;
+    /* Fontes do manual: Owners (títulos e chamadas) e Geller Text (texto).
+       Na web usamos as equivalentes gratuitas: Archivo condensada e Source Serif 4. */
     --font: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-texto: 'Source Serif 4', Georgia, serif;
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
     --shadow-hover: 0 12px 34px rgba(0, 0, 0, 0.22);
     --radius: 14px;
@@ -61,9 +74,9 @@ ul {
 }
 
 /* ========== TIPOGRAFIA ========== */
-/* Títulos largos e em caixa alta, como na identidade da casa */
+/* Títulos condensados e em caixa alta (Owners Narrow Bold no manual) */
 h1, h2 {
-    font-stretch: 125%;
+    font-stretch: 72%;
     font-weight: 900;
     text-transform: uppercase;
     line-height: 1.02;
@@ -81,7 +94,7 @@ h2 {
 }
 
 h3 {
-    font-stretch: 115%;
+    font-stretch: 80%;
     font-size: 1.3rem;
     font-weight: 800;
     text-transform: uppercase;
@@ -120,7 +133,7 @@ p {
     padding: 15px 30px;
     border-radius: 50px;
     font-family: var(--font);
-    font-stretch: 110%;
+    font-stretch: 85%;
     font-weight: 800;
     font-size: 0.95rem;
     text-transform: uppercase;
@@ -139,7 +152,7 @@ p {
 .btn-primary:hover {
     background: var(--gold);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(245, 200, 66, 0.35);
+    box-shadow: 0 8px 24px rgba(147, 97, 56, 0.4);
 }
 
 .btn-secondary,
@@ -169,7 +182,7 @@ p {
 
 /* Quando o usuário desce a página, a topbar aparece (classe aplicada via JS) */
 .header.scrolled {
-    background: rgba(10, 26, 17, 0.96);
+    background: rgba(37, 45, 26, 0.96);
     backdrop-filter: blur(10px);
     padding: 10px 0;
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
@@ -212,7 +225,7 @@ p {
     padding: 9px 16px;
     border-radius: 50px;
     border: 1px solid rgba(255, 255, 255, 0.4);
-    background: rgba(10, 26, 17, 0.25);
+    background: rgba(37, 45, 26, 0.25);
     color: var(--white);
     font-family: var(--font);
     font-size: 0.85rem;
@@ -362,8 +375,8 @@ p {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(180deg, rgba(10, 26, 17, 0.75) 0%, rgba(10, 26, 17, 0) 28%),
-        linear-gradient(0deg, rgba(10, 26, 17, 0.97) 8%, rgba(10, 26, 17, 0.55) 55%, rgba(10, 26, 17, 0.2) 100%);
+        linear-gradient(180deg, rgba(37, 45, 26, 0.75) 0%, rgba(37, 45, 26, 0) 28%),
+        linear-gradient(0deg, rgba(37, 45, 26, 0.97) 8%, rgba(37, 45, 26, 0.55) 55%, rgba(37, 45, 26, 0.2) 100%);
 }
 
 .hero .container {
@@ -479,7 +492,7 @@ section {
 
 .sobre-destaques strong {
     display: block;
-    font-stretch: 120%;
+    font-stretch: 75%;
     font-weight: 900;
     font-size: 1.35rem;
     text-transform: uppercase;
@@ -525,7 +538,7 @@ section {
     position: absolute;
     inset: auto 0 0 0;
     padding: 80px 26px 26px;
-    background: linear-gradient(0deg, rgba(10, 26, 17, 0.97) 35%, rgba(10, 26, 17, 0) 100%);
+    background: linear-gradient(0deg, rgba(37, 45, 26, 0.97) 35%, rgba(37, 45, 26, 0) 100%);
 }
 
 .cardapio-content h3 {
@@ -786,7 +799,7 @@ section {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(10, 26, 17, 0.55) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f3d382' stroke-width='1.8'%3E%3Crect x='3' y='3' width='18' height='18' rx='5'/%3E%3Ccircle cx='12' cy='12' r='4'/%3E%3Ccircle cx='17.5' cy='6.5' r='1' fill='%23f3d382'/%3E%3C/svg%3E") center / 44px no-repeat;
+    background: rgba(37, 45, 26, 0.55) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f3d382' stroke-width='1.8'%3E%3Crect x='3' y='3' width='18' height='18' rx='5'/%3E%3Ccircle cx='12' cy='12' r='4'/%3E%3Ccircle cx='17.5' cy='6.5' r='1' fill='%23f3d382'/%3E%3C/svg%3E") center / 44px no-repeat;
     opacity: 0;
     transition: var(--transition);
 }
@@ -871,7 +884,7 @@ section {
 
 /* ========== POLÍTICA DE PRIVACIDADE ========== */
 .privacidade {
-    background: #06110b;
+    background: #1d2314;
     padding: 40px 0;
 }
 
@@ -986,7 +999,7 @@ section {
 
     h1 {
         font-size: 1.9rem;
-        font-stretch: 112%;
+        font-stretch: 72%;
     }
 
     h2 {
@@ -1037,4 +1050,82 @@ section {
         width: 180px;
         height: 180px;
     }
+}
+
+/* =====================================================================
+   IDENTIDADE VISUAL O CACHACEIRO
+   Cores, fontes e logo conforme o Manual de Identidade Visual (v1.0).
+   ===================================================================== */
+h1, h2 {
+    font-weight: 800;
+    line-height: 1.04;
+    letter-spacing: 0.005em;
+}
+
+h1 {
+    font-size: clamp(2.7rem, 7vw, 5.4rem);
+}
+
+h2 {
+    font-size: clamp(2.1rem, 4.6vw, 3.3rem);
+}
+
+/* Texto corrido em serifa editorial (Geller Text no manual) */
+p,
+.form-campo input,
+.form-campo textarea {
+    font-family: var(--font-texto);
+}
+
+p {
+    font-size: 1.05rem;
+}
+
+.eyebrow {
+    color: var(--caipira);
+}
+
+.btn-primary {
+    background: var(--carvalho);
+    color: var(--acucar);
+}
+
+.btn-primary:hover {
+    background: var(--caipira);
+    color: var(--cana);
+}
+
+.acao-btn:hover,
+.acao-btn[aria-expanded="true"] {
+    background: var(--carvalho);
+    border-color: var(--carvalho);
+    color: var(--acucar);
+}
+
+.sobre-destaques strong {
+    color: var(--caipira);
+}
+
+/* Seção clara de reservas: textos em cana e carvalho */
+.reservas .eyebrow {
+    color: var(--carvalho);
+}
+
+.footer {
+    border-top: 6px solid var(--carvalho);
+}
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Instagram logo abaixo do "Sobre": tom intermediário separa as duas seções escuras */
+.instagram {
+    background: var(--green-light);
 }
